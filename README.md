@@ -1,11 +1,11 @@
-## BEH-MMI: A Unified Brain-Eye-Hand Multimodal Interface for Human-Robot Interaction
+## InterSwarm: A Multimodal Semi-Physical Experimental Platform for Human-Swarm Teaming
 
 ## Abstract
-Advanced human-computer interface (HCI) based on multimodal physiological signals, such as Electroencephalogram (EEG), Electromyogram (EMG), and eye tracking, holds transformative potential for human-robot interaction (HRI). However, their adoption in real-world robotic applications has been limited due to the lack of systematic validation. To bridge the gap between HCI and robotics, a unified Brain-Eye-Hand Multi-Modal Interface (BEH-MMI) was designed that supports multi-modal HCI inputs and real-time dynamic visualization of mobile robots. The BEH-MMI consists of three components: a multi-modal human-computer interface (MHCI), a multi-robot semi-physical experimental platform (MSEP), and an intermediate software framework for system integration. The MHCI seamlessly integrates three physiological signal inputs (EEG, EMG, and eye tracking) and supports multiple experimental paradigms, such as steady-state visual evoked potentials and gesture recognition. The MSEP features multiple cost-effective omnidirectional wheeled mobile robots and multi-touch screens, enabling dynamic scene rendering and robot movement according to programmed instructions. The BEH-MMI liberates researchers from hardware and software implementation details, allowing them to concentrate on developing HCI methods without constraints imposed by fixed scenarios, tasks, or interfaces. To validate the functionality and performance, we conducted a three-phase experimental protocol: single-modal interaction testing, multimodal integration task evaluation, and practical robot application expansion. 
+Human-swarm teaming (HST) deeply integrates high-level human cognition with the distributed advantages of swarms, serving as a critical paradigm for advancing robot collectives toward real-world applications. However, existing experimental platforms are often closed, lack unified standards, and are difficult to extend. Extensive research remains confined to pure software simulations, with a severe validation gap when transitioning algorithms to physical deployment. To bridge this gap, we present a highly scalable open-source platform InterSwarm to provide a standardized integrated validation environment for decentralized swarm algorithms, human-robot interaction paradigms, and mixed-initiative teaming. InterSwarm consists of three components: (1) a scalable fleet of omnidirectional miniature robots for foundational motion control; (2) a multi-touch screen enabling occlusion-resilient localization and dynamic scene rendering; and (3) a flexible interaction framework supporting multimodal inputs and sensor fusion. Unlike conventional rigid hardware testbeds, InterSwarm emphasizes deployment flexibility and secondary development potential. It natively supports user-defined experimental protocols, allowing researchers to effortlessly integrate heterogeneous sensors and explore novel interaction modalities. Building upon pure software simulations to bridge the gap to physical reality, this modular architecture provides a low-barrier, versatile benchmark tool for physical experiments in swarm robotics, human robot interaction, and human-machine hybrid intelligence. The  project was open-sourced at https://github.com/Tammie-Li/InterSwarm. 
 
 ## Overview
-![overview](/Lib/overview.png "The overall architecture of the MMIP")
-consists of the human-robot interaction system and the multi-robot semi-physical experimental system. It supports interaction interfaces for three modalities, e.g. EEG, EMG, and eye-tracking, thereby providing support for human-robot simulation experiments.
+![overview](/Lib/figure2.png "The overall architecture of the InterSwarm")
+Hardware components of InterSwarm. The figure shows: (a) the overall of three components; (b) multimodal human-robot interaction system; (c-d) holonomic robot swarm; (e) dynamic environmental tracking and rendering system.
 
 ## Environmental requirements
 ```txt
@@ -17,19 +17,19 @@ scipy >= 1.6.2
 ```
 
 ## Usage
-### 1. Single-modal Interaction Test 
+### 1. One-take end-to-end demonstration of InterSwarm performing the frontier human robot interaction experiments
 ```python ssvep_image.py``` or ```python ssvep_stimulate.py```
  
-### 2. Quantitative Analysis
-Please refer to the program in the following link[https://github.com/Tammie-Li/sEMG-GF], whose data processing method is consistent with it
+### 2. Quantitative Analysis 
+Please refer to the floder STSNN, whose data processing method is consistent with it.
 
-### 3. Multi-modal Semi-Physics Comprehensive Experiment 
+### 3. One-take end-to-end demonstration of InterSwarm performing the human-swarm teaming experiments
 ```python main.py``` 
 
 modified the value **paradigm_name = "semi-physics"**
 
 
-### 4. Multi-modal Physics Comprehensive Validation
+### 4. One-take end-to-end demonstration of the software of InterSwarm performing the outdoor human-swarm teaming experiments
 ```python main.py```
 
 modified the value **paradigm_name = "physics"**
