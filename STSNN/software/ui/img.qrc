@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="IMG">
+    <file>src/hand.PNG</file>
+  </qresource>
+</RCC>
